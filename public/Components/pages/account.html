@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - MeetScribe</title>
+    <link rel="stylesheet" href="../styles/profile-styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="MeetScribe Logo">
+            <span>MeetingMinutes</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Meetings</a>
+            <a href="#">Calendar</a>
+        </nav>
+        <div class="user-icon">JS</div>
+    </header>
+
+    <div class="profile-header">
+        <div class="profile-avatar">JS</div>
+        <div class="profile-info">
+            <h2>John Smith</h2>
+            <p>Product Manager at Acme Inc.</p>
+        </div>
+        <button class="edit-btn">Edit</button>
+    </div>
+
+    <nav class="tab-nav">
+        <ul>
+            <li><a href="account.html" class="active">Account</a></li>
+            <li><a href="preferences.html">Preferences</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="history.html">History</a></li>
+        </ul>
+    </nav>
+
+    <section class="tab-content">
+        <div class="section-card">
+            <h3>Personal Information</h3>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" value="John Smith" readonly>
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" value="jsmith@acmeinc.com" readonly>
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" value="+1 (555) 123-4567" readonly>
+            </div>
+            <div class="form-group">
+                <label>Company Name</label>
+                <input type="text" value="Acme Inc." readonly>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h3>Job Title</h3>
+            <div class="form-group">
+                <label>Job Title</label>
+                <input type="text" value="Product Manager" readonly>
+            </div>
+            <div class="form-group">
+                <label>Team</label>
+                <input type="text" value="Product Team" readonly>
+            </div>
+        </div>
+    </section>
+
+    <script src="profile-scripts.js"></script>
+</body>
+</html>

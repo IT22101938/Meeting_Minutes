@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferences - MeetScribe</title>
+    <link rel="stylesheet" href="../styles/profile-styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="MeetScribe Logo">
+            <span>MeetingMinutes</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Meetings</a>
+            <a href="#">Calendar</a>
+        </nav>
+        <div class="user-icon">JS</div>
+    </header>
+
+    <div class="profile-header">
+        <div class="profile-avatar">JS</div>
+        <div class="profile-info">
+            <h2>John Smith</h2>
+            <p>Product Manager at Acme Inc.</p>
+        </div>
+        <button class="edit-btn">Edit</button>
+    </div>
+
+    <nav class="tab-nav">
+        <ul>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="preferences.html" class="active">Preferences</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="history.html">History</a></li>
+        </ul>
+    </nav>
+
+    <section class="tab-content">
+        <div class="section-card">
+            <h3>Meeting Preferences</h3>
+            <div class="toggle-group">
+                <label>Automatically record all meetings</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="toggle-group">
+                <label>Auto-generate meeting summaries</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="toggle-group">
+                <label>Distribute summary to all attendees</label>
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h3>Themes</h3>
+            <div class="form-group">
+                <label>Theme</label>
+                <select>
+                    <option>Light</option>
+                    <option>Dark</option>
+                    <option>System</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <script src="profile-scripts.js"></script>
+</body>
+</html>
