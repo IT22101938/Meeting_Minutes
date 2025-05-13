@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetScribe - Meeting Minutes Summary</title>
+    <link rel="stylesheet" href="../styles/meeting_minutes.css">
+    <link rel="stylesheet" href="../styles/summary.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <line x1="9" y1="2" x2="9" y2="4"></line>
+                    <line x1="15" y1="2" x2="15" y2="4"></line>
+                    <line x1="9" y1="20" x2="9" y2="22"></line>
+                    <line x1="15" y1="20" x2="15" y2="22"></line>
+                    <line x1="20" y1="9" x2="22" y2="9"></line>
+                    <line x1="20" y1="15" x2="22" y2="15"></line>
+                    <line x1="2" y1="9" x2="4" y2="9"></line>
+                    <line x1="2" y1="15" x2="4" y2="15"></line>
+                </svg>
+                <span>MeetScribe</span>
+            </a>
+            <button class="nav-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="user-profile">
+            <img src="../images/user.png" alt="User Avatar" class="user-avatar">
+            <div class="user-info">
+                <span class="user-name">John Doe</span>
+                <span class="user-plan">Premium Plan</span>
+            </div>
+        </div>
+
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>My Meetings</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link active">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <span>Meeting Minutes</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>Calendar</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Team</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+
+        <a href="#" class="logout">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+            <span>Logout</span>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="page-header">
+            <h1 class="page-title">Meeting Minutes</h1>
+            <div class="current-date">Friday, May 3, 2025</div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search minutes by keyword, topic, or speaker...">
+        </div>
+
+        <div class="meeting-filter">
+            <a href="meeting minutes.html" class="filter-btn" data-view="transcript">Transcript</a>
+            <a href="summary_view.html" class="filter-btn active" data-view="summary">Summary</a>
+            <a href="distribution.html" class="filter-btn" data-view="distribution">Distribution</a>
+        </div>
+
+        <div class="minutes-list">
+            <div class="minutes-header">
+                <h2 class="meeting-title">Product Team Weekly Sync</h2>
+                <div class="meeting-details">
+                    <span class="meeting-detail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        May 1, 2025
+                    </span>
+                    <span class="meeting-detail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        7 Participants
+                    </span>
+                    <span class="meeting-detail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                        45 min
+                    </span>
+                </div>
+            </div>
+
+            <div class="summary-container">
+                <div class="summary-section">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                        </div>
+                        <h3 class="summary-title">Overview</h3>
+                    </div>
+                    <div class="summary-content">
+                        <p>This week's Product Team meeting focused on Project Alpha's development timeline, design system updates, user testing results, and the upcoming marketing campaign. The team is on track to meet Q2 milestones with 80% of UI components completed and good progress on backend API integration.</p>
+                    </div>
+                </div>
+
+                <div class="summary-section">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="summary-title">Key Points</h3>
+                    </div>
+                    <div class="summary-content">
+                        <ul class="key-points-list">
+                            <li>Project Alpha is on track for Q2 milestones with 80% of UI components completed and backend API integration progressing well.</li>
+                            <li>New design system components have been finalized, focusing on navigation patterns and form controls.</li>
+                            <li>User testing revealed strong positive feedback on the new dashboard layout, but concerns about the profile page complexity.</li>
+                            <li>Marketing campaign launch is scheduled for June 15th, with social media assets already in development.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="summary-section">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="summary-title">Action Items</h3>
+                    </div>
+                    <div class="summary-content">
+                        <div class="action-items">
+                            <div class="action-item">
+                                <div class="action-checkbox">
+                                    <input type="checkbox" id="action1">
+                                    <label for="action1"></label>
+                                </div>
+                                <div class="action-details">
+                                    <p class="action-text">Share Figma prototypes with the team for feedback on navigation patterns and form controls</p>
+                                    <div class="action-meta">
+                                        <span class="action-assignee">Michael Chen</span>
+                                        <span class="action-due">Due: May 3, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-checkbox">
+                                    <input type="checkbox" id="action2">
+                                    <label for="action2"></label>
+                                </div>
+                                <div class="action-details">
+                                    <p class="action-text">Prepare internal testing plan for Project Alpha components</p>
+                                    <div class="action-meta">
+                                        <span class="action-assignee">Sarah Johnson</span>
+                                        <span class="action-due">Due: May 5, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-checkbox">
+                                    <input type="checkbox" id="action3">
+                                    <label for="action3"></label>
+                                </div>
+                                <div class="action-details">
+                                    <p class="action-text">Revise the profile page layout based on user testing feedback</p>
+                                    <div class="action-meta">
+                                        <span class="action-assignee">Lisa Wang</span>
+                                        <span class="action-due">Due: May 8, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-checkbox">
+                                    <input type="checkbox" id="action4">
+                                    <label for="action4"></label>
+                                </div>
+                                <div class="action-details">
+                                    <p class="action-text">Finalize color palette for alerts and notifications</p>
+                                    <div class="action-meta">
+                                        <span class="action-assignee">Michael Chen</span>
+                                        <span class="action-due">Due: May 10, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary-section">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 11 12 14 22 4"></polyline>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                            </svg>
+                        </div>
+                        <h3 class="summary-title">Decisions</h3>
+                    </div>
+                    <div class="summary-content">
+                        <div class="decisions-list">
+                            <div class="decision-item">
+                                <div class="decision-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <p>Project Alpha will proceed with the current timeline, aiming for internal testing next week.</p>
+                            </div>
+                            <div class="decision-item">
+                                <div class="decision-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <p>The profile page will be redesigned with a simplified layout based on user testing feedback.</p>
+                            </div>
+                            <div class="decision-item">
+                                <div class="decision-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <p>Marketing launch date is confirmed for June 15th with a focus on social media and email campaigns.</p>
+                            </div>
+                            <div class="decision-item">
+                                <div class="decision-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <p>The team will adopt the new design system components for all future UI development.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-actions">
+                <button class="action-button preview-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    Preview
+                </button>
+                <button class="action-button publish-btn primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                        <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                        <polyline points="7 3 7 8 15 8"></polyline>
+                    </svg>
+                    Publish
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="summary.js"></script>
+</body>
+</html>

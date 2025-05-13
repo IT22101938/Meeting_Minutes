@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetScribe - Meeting Minutes Transcript</title>
+    <link rel="stylesheet" href="../styles/meeting_minutes.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="logo-container">
+            <a href="../images/logo.png" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                    <rect x="9 pits="9" width="6" height="6"></rect>
+                    <line x1="9" y1="2" x2="9" y2="4"></line>
+                    <line x1="15" y1="2" x2="15" y2="4"></line>
+                    <line x1="9" y1="20" x2="9" y2="22"></line>
+                    <line x1="15" y1="20" x2="15" y2="22"></line>
+                    <line x1="20" y1="9" x2="22" y2="9"></line>
+                    <line x1="20" y1="15" x2="22" y2="15"></line>
+                    <line x1="2" y1="9" x2="4" y2="9"></line>
+                    <line x1="2" y1="15" x2="4" y2="15"></line>
+                </svg>
+                <span>MeetScribe</span>
+            </a>
+            <button class="nav-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="user-profile">
+            <img src="../images/user.png" alt="User Avatar" class="user-avatar">
+            <div class="user-info">
+                <span class="user-name">John Doe</span>
+                <span class="user-plan">Premium Plan</span>
+            </div>
+        </div>
+
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>My Meetings</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link active">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <span>Meeting Minutes</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>Calendar</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Team</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+
+        <a href="#" class="logout">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+            <span>Logout</span>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="page-header">
+            <h1 class="page-title">Meeting Minutes - Transcript</h1>
+            <div class="current-date">Friday, May 3, 2025</div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search transcript by keyword, topic, or speaker...">
+        </div>
+
+        <div class="meeting-filter">
+            <a href="meeting minutes.html" class="filter-btn active" data-view="transcript">Transcript</a>
+            <a href="summary_view.html" class="filter-btn" data-view="summary">Summary</a>
+            <a href="distribution.html" class="filter-btn" data-view="distribution">Distribution</a>
+        </div>
+
+        <a href="#" class="back-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Meetings
+        </a>
+
+        <div class="minutes-list">
+            <div class="minutes-header">
+                <h2 class="meeting-title">Product Team Weekly Sync</h2>
+                <div class="meeting-details">
+                    <span class="meeting-detail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        May 1, 2025 - 11:00 AM
+                    </span>
+                    <span class="meeting-detail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        7 Participants
+                    </span>
+                    <span class="meeting-detail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                        45 min
+                    </span>
+                </div>
+            </div>
+
+            <div class="minutes-body">
+                <div class="timeline">
+                    <div class="timeline-item speaker-sarah">
+                        <div class="timeline-header">
+                            <div class="speaker">
+                                <img src="../images/female_user.png" alt="Sarah Johnson" class="speaker-avatar">
+                                <span class="speaker-name">Sarah Johnson</span>
+                            </div>
+                            <span class="timestamp">11:05 AM</span>
+                        </div>
+                        <div class="topic-tags">
+                            <span class="topic-tag">Project Alpha</span>
+                            <span class="topic-tag">Timeline</span>
+                        </div>
+                        <p class="minutes-content">
+                            Good morning, everyone. Let's start with an update on Project Alpha's development timeline. We're currently on track to meet our Q2 milestones. The frontend team has completed 80% of the planned UI components, and the backend API integration is progressing well. We should be ready for internal testing by next week.
+                        </p>
+                        <div class="minutes-actions">
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Comment
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                </svg>
+                                Edit
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item speaker-michael">
+                        <div class="timeline-header">
+                            <div class="speaker">
+                                <img src="../images/male_user.png" alt="Michael Chen" class="speaker-avatar">
+                                <span class="speaker-name">Michael Chen</span>
+                            </div>
+                            <span class="timestamp">11:12 AM</span>
+                        </div>
+                        <div class="topic-tags">
+                            <span class="topic-tag">Design System</span>
+                            <span class="topic-tag">Components</span>
+                        </div>
+                        <p class="minutes-content">
+                            Thanks, Sarah. On the design side, we've finalized the new design system components last week. This includes navigation patterns and form controls. We're still discussing the color palette for alerts and notifications. I'll share the Figma prototypes after the meeting for everyone to review and provide feedback.
+                        </p>
+                        <div class="minutes-actions">
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Comment
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                </svg>
+                                Edit
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item speaker-emily">
+                        <div class="timeline-header">
+                            <div class="speaker">
+                                <img src="../images/female_user2.png" alt="Emily Rodriguez" class="speaker-avatar">
+                                <span class="speaker-name">Emily Rodriguez</span>
+                            </div>
+                            <span class="timestamp">11:18 AM</span>
+                        </div>
+                        <div class="topic-tags">
+                            <span class="topic-tag">Testing</span>
+                            <span class="topic-tag">QA</span>
+                        </div>
+                        <p class="minutes-content">
+                            On the QA front, we're preparing the test cases for Project Alpha's internal testing phase. We've identified a few edge cases in the authentication module that need to be addressed. I'll coordinate with the backend team to ensure these are resolved before testing begins next week.
+                        </p>
+                        <div class="minutes-actions">
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Comment
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                </svg>
+                                Edit
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item speaker-david">
+                        <div class="timeline-header">
+                            <div class="speaker">
+                                <img src="../images/male_user1.png" alt="David Kim" class="speaker-avatar">
+                                <span class="speaker-name">David Kim</span>
+                            </div>
+                            <span class="timestamp">11:25 AM</span>
+                        </div>
+                        <div class="topic-tags">
+                            <span class="topic-tag">Backend</span>
+                            <span class="topic-tag">API</span>
+                        </div>
+                        <p class="minutes-content">
+                            Thanks, Emily. The backend team is working on optimizing the API endpoints for better performance. We've also started integrating the new authentication module. I'll make sure to address the edge cases you mentioned and will provide an update by tomorrow.
+                        </p>
+                        <div class="minutes-actions">
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Comment
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                </svg>
+                                Edit
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item speaker-sarah">
+                        <div class="timeline-header">
+                            <div class="speaker">
+                                <img src="../images/female_user.png" alt="Sarah Johnson" class="speaker-avatar">
+                                <span class="speaker-name">Sarah Johnson</span>
+                            </div>
+                            <span class="timestamp">11:32 AM</span>
+                        </div>
+                        <div class="topic-tags">
+                            <span class="topic-tag">Next Steps</span>
+                            <span class="topic-tag">Action Items</span>
+                        </div>
+                        <p class="minutes-content">
+                            Great updates, everyone. Let's wrap up with action items. Michael, please share the Figma prototypes by end of day. Emily, finalize the test cases by tomorrow. David, address the authentication edge cases and provide an update. I'll schedule a follow-up meeting for next week to review testing progress. Any other points before we close?
+                        </p>
+                        <div class="minutes-actions">
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Comment
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                </svg>
+                                Edit
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item speaker-michael">
+                        <div class="timeline-header">
+                            <div class="speaker">
+                                <img src="../images/male_user.png" alt="Michael Chen" class="speaker-avatar">
+                                <span class="speaker-name">Michael Chen</span>
+                            </div>
+                            <span class="timestamp">11:38 AM</span>
+                        </div>
+                        <div class="topic-tags">
+                            <span class="topic-tag">Feedback</span>
+                        </div>
+                        <p class="minutes-content">
+                            Just one thing—can we ensure the feedback on the Figma prototypes is consolidated by Wednesday? I want to make sure we can iterate quickly before the next sprint.
+                        </p>
+                        <div class="minutes-actions">
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Comment
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                </svg>
+                                Edit
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item speaker-sarah">
+                        <div class="timeline-header">
+                            <div class="speaker">
+                                <img src="../images/female_user.png" alt="Sarah Johnson" class="speaker-avatar">
+                                <span class="speaker-name">Sarah Johnson</span>
+                            </div>
+                            <span class="timestamp">11:40 AM</span>
+                        </div>
+                        <div class="topic-tags">
+                            <span class="topic-tag">Closing</span>
+                        </div>
+                        <p class="minutes-content">
+                            Absolutely, Michael. I'll set a deadline for feedback by Wednesday. Thanks, everyone, for the productive discussion. Meeting adjourned.
+                        </p>
+                        <div class="minutes-actions">
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Comment
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                </svg>
+                                Edit
+                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Back button functionality
+        document.querySelector('.back-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            // In a real application, this would navigate to the meetings list page
+            alert('Navigating back to meetings list...');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+/* Distribution View Specific Styles */
+.distribution-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+.meeting-details {
+    margin-bottom: 32px;
+}
+
+.meeting-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.meeting-details-info {
+    display: flex;
+    gap: 24px;
+    color: var(--dark-gray);
+    font-size: 14px;
+}
+
+.meeting-detail {
+    display: flex;
+    align-items: center;
+}
+
+.meeting-detail svg {
+    margin-right: 6px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+/* Recipients Section */
+.recipients-section {
+    margin-bottom: 40px;
+}
+
+.recipients-list {
+    margin-bottom: 16px;
+}
+
+.recipients-ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.recipient-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--medium-gray);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.recipient-item.added {
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.remove-recipient-btn {
+    background-color: var(--warning-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.remove-recipient-btn:hover {
+    background-color: #e68a00;
+    transform: scale(1.05);
+}
+
+.recipient-input-container {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.recipient-input {
+    flex-grow: 1;
+    padding: 12px 16px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+}
+
+.recipient-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Quick Add Section */
+.quick-add-section {
+    margin-bottom: 40px;
+}
+
+.quick-add-options {
+    display: flex;
+    gap: 16px;
+}
+
+.quick-add-btn {
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--dark-gray);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.quick-add-btn:hover {
+    background-color: var(--light-gray);
+    transform: scale(1.02);
+}
+
+.quick-add-btn:active {
+    transform: scale(0.98);
+}
+
+/* Content Options */
+.content-options {
+    margin-bottom: 40px;
+}
+
+.content-option {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.content-option input {
+    margin-right: 10px;
+}
+
+/* Export Options */
+.export-options {
+    margin-bottom: 40px;
+}
+
+.export-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.export-btn {
+    padding: 12px 20px;
+    background-color: white;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--dark-gray);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    position: relative;
+}
+
+.export-btn:hover {
+    background-color: var(--light-gray);
+    transform: scale(1.02);
+}
+
+.export-btn.loading::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--dark-gray);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-left: 8px;
+}
+
+/* Access Permission */
+.access-permission {
+    margin-bottom: 40px;
+}
+
+.permission-option {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.permission-option input {
+    margin-right: 10px;
+}
+
+/* Distribution Actions */
+.distribution-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.action-btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    position: relative;
+}
+
+.action-btn.primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.02);
+}
+
+.action-btn.primary.loading::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-left: 8px;
+}
+
+.action-btn.secondary {
+    background-color: white;
+    border: 1px solid var(--medium-gray);
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--dark-gray);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.action-btn.secondary:hover {
+    background-color: var(--light-gray);
+    transform: scale(1.02);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .distribution-container {
+        padding: 24px;
+    }
+
+    .recipient-input-container {
+        flex-direction: column;
+    }
+
+    .action-btn.primary, .action-btn.secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .quick-add-options {
+        flex-direction: column;
+    }
+
+    .quick-add-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .export-buttons {
+        flex-direction: column;
+    }
+
+    .export-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .distribution-actions {
+        flex-direction: column;
+    }
+}

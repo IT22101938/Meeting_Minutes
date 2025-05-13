@@ -1,0 +1,226 @@
+/* Summary View Specific Styles */
+.summary-container {
+    padding: 20px;
+}
+
+.summary-section {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.summary-section:last-child {
+    border-bottom: none;
+}
+
+.summary-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.summary-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(67, 97, 238, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    color: var(--primary-color);
+}
+
+.summary-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.summary-content {
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.summary-content p {
+    margin-bottom: 12px;
+}
+
+/* Key Points */
+.key-points-list {
+    list-style-type: none;
+    padding-left: 8px;
+}
+
+.key-points-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+}
+
+.key-points-list li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+/* Action Items */
+.action-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.action-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px;
+    background-color: var(--light-gray);
+    border-radius: 6px;
+}
+
+.action-checkbox {
+    margin-right: 12px;
+    position: relative;
+}
+
+.action-checkbox input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.action-checkbox label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.action-checkbox input[type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--primary-color);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.action-details {
+    flex-grow: 1;
+}
+
+.action-text {
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.action-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--dark-gray);
+}
+
+.action-assignee {
+    display: inline-flex;
+    align-items: center;
+}
+
+.action-assignee:before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    margin-right: 4px;
+}
+
+/* Decisions */
+.decisions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.decision-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.decision-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(16, 185, 129, 0.1);
+    display: verdadeira flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    color: var(--success-color);
+    flex-shrink: 0;
+}
+
+/* Summary Actions */
+.summary-actions {
+    display: flex;
+    gap: 12px;
+    margin: 16px 0;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+/* Base button styling */
+.action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #e4e4e7;
+}
+
+/* Preview button styling */
+.preview-btn {
+    background-color: #ffffff;
+    color: #4b5563;
+}
+
+.preview-btn:hover {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+}
+
+/* Publish button styling (primary) */
+.publish-btn.primary {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.publish-btn.primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+/* SVG icon styling */
+.action-button svg {
+    stroke-width: 2;
+}

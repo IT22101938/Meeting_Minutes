@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetScribe - Distribution</title>
+    <link rel="stylesheet" href="../styles/meeting_minutes.css">
+    <link rel="stylesheet" href="../styles/distribution.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <line x1="9" y1="2" x2="9" y2="4"></line>
+                    <line x1="15" y1="2" x2="15" y2="4"></line>
+                    <line x1="9" y1="20" x2="9" y2="22"></line>
+                    <line x1="15" y1="20" x2="15" y2="22"></line>
+                    <line x1="20" y1="9" x2="22" y2="9"></line>
+                    <line x1="20" y1="15" x2="22" y2="15"></line>
+                    <line x1="2" y1="9" x2="4" y2="9"></line>
+                    <line x1="2" y1="15" x2="4" y2="15"></line>
+                </svg>
+                <span>MeetScribe</span>
+            </a>
+            <button class="nav-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="user-profile">
+            <img src="../images/user.png" alt="User Avatar" class="user-avatar">
+            <div class="user-info">
+                <span class="user-name">John Doe</span>
+                <span class="user-plan">Premium Plan</span>
+            </div>
+        </div>
+
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#" class="nav-link"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg><span>Dashboard</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><span>My Meetings</span></a></li>
+            <li class="nav-item"><a href="meeting minutes.html" class="nav-link active"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg><span>Meeting Minutes</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><span>Calendar</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Team</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg><span>Settings</span></a></li>
+        </ul>
+
+        <a href="#" class="logout">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+            <span>Logout</span>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="page-header">
+            <h1 class="page-title">Meeting Minutes - Distribution</h1>
+            <div class="current-date">Friday, May 3, 2025</div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search minutes by keyword, topic, or speaker...">
+        </div>
+
+        <div class="meeting-filter">
+            <a href="meeting minutes.html" class="filter-btn" data-view="transcript">Transcript</a>
+            <a href="summary_view.html" class="filter-btn" data-view="summary">Summary</a>
+            <a href="distribution.html" class="filter-btn active" data-view="distribution">Distribution</a>
+        </div>
+
+        <div class="distribution-container">
+            <div class="meeting-details">
+                <h2 class="meeting-title">Product Strategy Meeting</h2>
+                <div class="meeting-details-info">
+                    <span class="meeting-detail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        Apr 16, 2023 - 02:49 PM
+                    </span>
+                    <span class="meeting-detail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                        45 min
+                    </span>
+                </div>
+            </div>
+
+            <h2 class="section-title">Share Meeting Minutes</h2>
+
+            <!-- Recipients -->
+            <div class="recipients-section">
+                <h3>Recipients</h3>
+                <div class="recipients-list">
+                    <ul id="recipients-ul" class="recipients-ul">
+                        <li class="recipient-item">
+                            <span>john.smith@example.com</span>
+                            <button class="remove-recipient-btn">Remove</button>
+                        </li>
+                        <li class="recipient-item">
+                            <span>maria.kim@example.com</span>
+                            <button class="remove-recipient-btn">Remove</button>
+                        </li>
+                        <li class="recipient-item">
+                            <span>alex.cooper@example.com</span>
+                            <button class="remove-recipient-btn">Remove</button>
+                        </li>
+                        <li class="recipient-item">
+                            <span>tanya.patel@example.com</span>
+                            <button class="remove-recipient-btn">Remove</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recipient-input-container">
+                    <input type="email" id="recipient-email" class="recipient-input" placeholder="Enter recipient email...">
+                    <button id="add-recipient-btn" class="action-btn primary">Add Recipient</button>
+                </div>
+                <p id="email-error" class="error-message" style="display: none;">Please enter a valid email address.</p>
+            </div>
+
+            <!-- Quick Add -->
+            <div class="quick-add-section">
+                <h3>Quick Add</h3>
+                <br/>
+                <div class="quick-add-options">
+                    <button class="quick-add-btn" data-email="devteam@example.com">Development Team</button>
+                    <button class="quick-add-btn" data-email="marketing@example.com">Marketing & Design</button>
+                    <button class="quick-add-btn" data-email="leadership@example.com">Leadership</button>
+                </div>
+            </div>
+            
+
+            <!-- Options -->
+            <div class="content-options">
+                <h3>Options</h3>
+                <br/>
+                <label class="content-option">
+                    <input type="checkbox" name="content" value="transcript" checked> Include Transcript
+                </label>
+                <label class="content-option">
+                    <input type="checkbox" name="content" value="summary"> Include Summary
+                </label>
+                <label class="content-option">
+                    <input type="checkbox" name="content" value="comments"> Include Comments
+                </label>
+            </div>
+
+            <!-- Export Options -->
+            <div class="export-options">
+                <h3>Export Option</h3>
+                <br/>
+                <div class="export-buttons">
+                    <button id="export-pdf-btn" class="action-btn export-btn">Export as PDF</button>
+                    <button id="export-word-btn" class="action-btn export-btn">Export as Word</button>
+                    <button id="export-excel-btn" class="action-btn export-btn">Export as Excel</button>
+                </div>
+            </div>
+
+            <!-- Access Permission -->
+            <div class="access-permission">
+                <h3>Access Permission</h3>
+                <br/>
+                <label class="permission-option">
+                    <input type="radio" name="permission" value="view" checked> View Only
+                </label>
+                <label class="permission-option">
+                    <input type="radio" name="permission" value="edit"> Edit Access
+                </label>
+            </div>
+
+            <!-- Actions -->
+            <div class="distribution-actions">
+                <button id="cancel-btn" class="action-btn secondary">Cancel</button>
+                <button id="share-btn" class="action-btn primary">Share</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Add recipient
+        document.getElementById('add-recipient-btn').addEventListener('click', () => {
+            const emailInput = document.getElementById('recipient-email');
+            const email = emailInput.value.trim();
+            const errorMessage = document.getElementById('email-error');
+            if (!emailRegex.test(email)) {
+                errorMessage.style.display = 'block';
+                return;
+            }
+            errorMessage.style.display = 'none';
+            const recipientsList = document.getElementById('recipients-ul');
+            const li = document.createElement('li');
+            li.className = 'recipient-item';
+            li.innerHTML = `
+                <span>${email}</span>
+                <button class="remove-recipient-btn" onclick="this.parentElement.remove()">Remove</button>
+            `;
+            recipientsList.appendChild(li);
+            emailInput.value = '';
+        });
+
+        // Quick Add
+        document.querySelectorAll('.quick-add-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const email = btn.getAttribute('data-email');
+                const recipientsList = document.getElementById('recipients-ul');
+                const li = document.createElement('li');
+                li.className = 'recipient-item';
+                li.innerHTML = `
+                    <span>${email}</span>
+                    <button class="remove-recipient-btn" onclick="this.parentElement.remove()">Remove</button>
+                `;
+                recipientsList.appendChild(li);
+            });
+        });
+
+        // Remove recipient (already handled by onclick in HTML)
+
+        // Share button
+        document.getElementById('share-btn').addEventListener('click', () => {
+            const recipients = Array.from(document.querySelectorAll('.recipient-item span')).map(span => span.textContent);
+            const contentOptions = Array.from(document.querySelectorAll('input[name="content"]:checked')).map(cb => cb.value);
+            const permission = document.querySelector('input[name="permission"]:checked').value;
+            if (recipients.length === 0) {
+                alert('Please add at least one recipient.');
+                return;
+            }
+            alert(`Sharing with: ${recipients.join(', ')}\nContent: ${contentOptions.join(', ') || 'None'}\nPermission: ${permission}`);
+        });
+
+        // Export buttons
+        document.getElementById('export-pdf-btn').addEventListener('click', () => {
+            const contentOptions = Array.from(document.querySelectorAll('input[name="content"]:checked')).map(cb => cb.value).join(', ') || 'None';
+            alert(`Exporting as PDF with: ${contentOptions}`);
+        });
+
+        document.getElementById('export-word-btn').addEventListener('click', () => {
+            const contentOptions = Array.from(document.querySelectorAll('input[name="content"]:checked')).map(cb => cb.value).join(', ') || 'None';
+            alert(`Exporting as Word with: ${contentOptions}`);
+        });
+
+        document.getElementById('export-excel-btn').addEventListener('click', () => {
+            const contentOptions = Array.from(document.querySelectorAll('input[name="content"]:checked')).map(cb => cb.value).join(', ') || 'None';
+            alert(`Exporting as Excel with: ${contentOptions}`);
+        });
+
+        // Cancel button
+        document.getElementById('cancel-btn').addEventListener('click', () => {
+            if (confirm('Are you sure you want to cancel?')) {
+                window.location.href = 'meeting minutes.html';
+            }
+        });
+    </script>
+</body>
+</html>
