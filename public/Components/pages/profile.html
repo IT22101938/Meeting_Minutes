@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetScribe - Profile</title>
+    <link rel="stylesheet" href="../styles/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <img src="https://via.placeholder.com/30" alt="Logo" class="logo-icon">
+                <h1 class="logo-text">MeetScribe</h1>
+            </div>
+            <div class="user-profile-mini">
+                <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar-mini">
+                <div class="user-info-mini">
+                    <p class="user-name">John Doe</p>
+                    <p class="user-plan">Premium Plan</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-comments"></i> My Meetings</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Meeting Minutes</a></li>
+                    <li><a href="#"><i class="far fa-calendar"></i> Calendar</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Team</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="content-header">
+                <div class="page-title">
+                    <h2>User Profile</h2>
+                </div>
+                <div class="date-display">
+                    <p id="current-date">Tuesday, May 13, 2025</p>
+                </div>
+            </header>
+
+            <!-- Profile content -->
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar-section">
+                        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-avatar">
+                        <button class="edit-avatar-btn"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <div class="profile-info-section">
+                        <div class="profile-name-container">
+                            <h2 id="user-full-name">John Doe</h2>
+                            <button class="edit-btn" id="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+                        </div>
+                        <div class="profile-badge">
+                            <span class="premium-badge">Premium Plan</span>
+                            <span class="expiry-date">Expires: Dec 31, 2025</span>
+                        </div>
+                        <div class="profile-email">
+                            <span id="user-email">johndoe@example.com</span>
+                        </div>
+                        <div class="profile-company">
+                            <span id="user-company">Acme Corporation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="account">Account</button>
+                    <button class="tab-btn" data-tab="statistics">Statistics</button>
+                    <button class="tab-btn" data-tab="preferences">Preferences</button>
+                    <button class="tab-btn" data-tab="security">Security</button>
+                </div>
+
+                <div class="profile-content">
+                    <!-- Account Tab -->
+                    <div class="tab-content active" id="account-tab">
+                        <div class="profile-section">
+                            <h3>Account Information</h3>
+                            <div class="profile-form">
+                                <div class="form-group">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" value="John" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" value="Doe" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" value="johndoe@example.com" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="job-title">Job Title</label>
+                                    <input type="text" id="job-title" value="Product Manager" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="company">Company</label>
+                                    <input type="text" id="company" value="Acme Corporation" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="time-zone">Time Zone</label>
+                                    <select id="time-zone" disabled>
+                                        <option value="utc-8">Pacific Time (UTC-8)</option>
+                                        <option value="utc-5">Eastern Time (UTC-5)</option>
+                                        <option value="utc+0">UTC</option>
+                                        <option value="utc+1">Central European Time (UTC+1)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile-section">
+                            <h3>Subscription Details</h3>
+                            <div class="subscription-details">
+                                <div class="subscription-info">
+                                    <div class="info-label">Current Plan</div>
+                                    <div class="info-value">Premium Plan</div>
+                                </div>
+                                <div class="subscription-info">
+                                    <div class="info-label">Billing Cycle</div>
+                                    <div class="info-value">Annual</div>
+                                </div>
+                                <div class="subscription-info">
+                                    <div class="info-label">Next Billing Date</div>
+                                    <div class="info-value">December 31, 2025</div>
+                                </div>
+                                <div class="subscription-info">
+                                    <div class="info-label">Payment Method</div>
+                                    <div class="info-value">
+                                        <span class="credit-card"><i class="fab fa-cc-visa"></i> •••• 4242</span>
+                                    </div>
+                                </div>
+                                <div class="subscription-actions">
+                                    <button class="btn-primary">Upgrade Plan</button>
+                                    <button class="btn-secondary">Update Payment</button>
+                                    <button class="btn-text">Billing History</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics Tab -->
+                    <div class="tab-content" id="statistics-tab">
+                        <div class="profile-section">
+                            <h3>Meeting Statistics</h3>
+                            <div class="stats-container">
+                                <div class="stat-card">
+                                    <div class="stat-value">42</div>
+                                    <div class="stat-label">Meetings Recorded</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-value">37hr</div>
+                                    <div class="stat-label">Total Recording Time</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-value">12</div>
+                                    <div class="stat-label">Teams Created</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-value">53min</div>
+                                    <div class="stat-label">Average Meeting Length</div>
+                                </div>
+                            </div>
+                            <div class="chart-container">
+                                <h4>Monthly Meeting Activity</h4>
+                                <div class="chart-placeholder">
+                                    <!-- Chart will be rendered here by JavaScript -->
+                                    <img src="https://via.placeholder.com/800x300?text=Meeting+Activity+Chart" alt="Meeting Activity Chart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-section">
+                            <h3>Storage Usage</h3>
+                            <div class="storage-container">
+                                <div class="storage-meter">
+                                    <div class="storage-progress" style="width: 65%;"></div>
+                                </div>
+                                <div class="storage-details">
+                                    <p>6.5 GB used of 10 GB</p>
+                                    <button class="btn-text">Manage Storage</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preferences Tab -->
+                    <div class="tab-content" id="preferences-tab">
+                        <div class="profile-section">
+                            <h3>Meeting Preferences</h3>
+                            <div class="preferences-form">
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="auto-transcribe" checked disabled>
+                                    <label for="auto-transcribe">Automatically transcribe meetings</label>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="auto-summarize" checked disabled>
+                                    <label for="auto-summarize">Generate AI summaries after meetings</label>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="auto-distribute" checked disabled>
+                                    <label for="auto-distribute">Automatically distribute minutes to participants</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="default-language">Default Language</label>
+                                    <select id="default-language" disabled>
+                                        <option value="en">English</option>
+                                        <option value="es">Spanish</option>
+                                        <option value="fr">French</option>
+                                        <option value="de">German</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="date-format">Date Format</label>
+                                    <select id="date-format" disabled>
+                                        <option value="mdy">MM/DD/YYYY</option>
+                                        <option value="dmy">DD/MM/YYYY</option>
+                                        <option value="ymd">YYYY-MM-DD</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-section">
+                            <h3>Notification Settings</h3>
+                            <div class="preferences-form">
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="email-notify" checked disabled>
+                                    <label for="email-notify">Email notifications</label>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="browser-notify" checked disabled>
+                                    <label for="browser-notify">Browser notifications</label>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="meeting-reminder" checked disabled>
+                                    <label for="meeting-reminder">Meeting reminders (15 min before)</label>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="transcript-ready" checked disabled>
+                                    <label for="transcript-ready">When transcript is ready</label>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="mentions" checked disabled>
+                                    <label for="mentions">When mentioned in comments</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Tab -->
+                    <div class="tab-content" id="security-tab">
+                        <div class="profile-section">
+                            <h3>Password</h3>
+                            <div class="security-form">
+                                <div class="form-group">
+                                    <label for="current-password">Current Password</label>
+                                    <input type="password" id="current-password" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-password">New Password</label>
+                                    <input type="password" id="new-password" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm New Password</label>
+                                    <input type="password" id="confirm-password" disabled>
+                                </div>
+                                <div class="button-group">
+                                    <button class="btn-secondary" disabled>Change Password</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-section">
+                            <h3>Two-Factor Authentication</h3>
+                            <div class="two-factor-status">
+                                <div class="status-indicator enabled">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>2FA is currently enabled</span>
+                                </div>
+                                <p class="status-description">Your account is protected with two-factor authentication.</p>
+                                <button class="btn-secondary" disabled>Disable 2FA</button>
+                            </div>
+                        </div>
+                        <div class="profile-section">
+                            <h3>Login Sessions</h3>
+                            <div class="sessions-list">
+                                <div class="session-item current">
+                                    <div class="session-details">
+                                        <i class="fas fa-laptop"></i>
+                                        <div class="session-info">
+                                            <div class="session-device">Chrome on Windows</div>
+                                            <div class="session-location">San Francisco, CA (Current)</div>
+                                            <div class="session-time">Active now</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-details">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <div class="session-info">
+                                            <div class="session-device">iOS App</div>
+                                            <div class="session-location">San Francisco, CA</div>
+                                            <div class="session-time">Last active: 3 hours ago</div>
+                                        </div>
+                                    </div>
+                                    <button class="btn-text">Revoke</button>
+                                </div>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn-danger" disabled>Sign Out All Devices</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set current date in header
+        document.addEventListener('DOMContentLoaded', function() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date();
+            document.getElementById('current-date').textContent = today.toLocaleDateString('en-US', options);
+            
+            // Tab functionality
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons and content
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = btn.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-tab`).classList.add('active');
+                });
+            });
+            
+            // Edit profile button functionality
+            const editProfileBtn = document.getElementById('edit-profile-btn');
+            const inputs = document.querySelectorAll('.profile-form input, .profile-form select');
+            const preferencesInputs = document.querySelectorAll('.preferences-form input, .preferences-form select');
+            
+            editProfileBtn.addEventListener('click', function() {
+                if (this.innerHTML.includes('Edit Profile')) {
+                    // Switch to edit mode
+                    this.innerHTML = '<i class="fas fa-save"></i> Save Changes';
+                    inputs.forEach(input => input.disabled = false);
+                    preferencesInputs.forEach(input => input.disabled = false);
+                } else {
+                    // Switch to view mode
+                    this.innerHTML = '<i class="fas fa-edit"></i> Edit Profile';
+                    inputs.forEach(input => input.disabled = true);
+                    preferencesInputs.forEach(input => input.disabled = true);
+                    
+                    // Here you would typically save changes to the server
+                    // For demo purposes, we'll update the displayed name
+                    const firstName = document.getElementById('first-name').value;
+                    const lastName = document.getElementById('last-name').value;
+                    document.getElementById('user-full-name').textContent = `${firstName} ${lastName}`;
+                    
+                    // Update email and company in header
+                    document.getElementById('user-email').textContent = document.getElementById('email').value;
+                    document.getElementById('user-company').textContent = document.getElementById('company').value;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
