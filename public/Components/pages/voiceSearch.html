@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Search for Accessibility</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .search-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    #searchInput {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #voiceButton:focus, #searchButton:focus {
+      outline: 2px solid blue;
+    }
+    #results {
+      margin-top: 20px;
+    }
+    .result-item {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Accessible Voice Search</h1>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Enter or speak your search" aria-label="Search input">
+    <button id="voiceButton" aria-label="Start voice search">
+      🎤 Voice Search
+    </button>
+    <button id="searchButton">Search</button>
+  </div>
+  <div id="status" role="status" aria-live="polite" class="hidden"></div>
+  <div id="results" role="region" aria-label="Search results"></div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const voiceButton = document.getElementById('voiceButton');
+    const searchButton = document.getElementById('searchButton');
+    const status = document.getElementById('status');
+    const results = document.getElementById('results');
+
+    // Check if Web Speech API is supported
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const synth = window.speechSynthesis;
+
+    if (!SpeechRecognition || !synth) {
+      alert('Your browser does not support voice search. Please use a modern browser like Chrome or Edge.');
+      voiceButton.disabled = true;
+    } else {
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'en-US';
+      recognition.interimResults = false;
+
+      voiceButton.addEventListener('click', () => {
+        recognition.start();
+        status.textContent = 'Listening... Speak now.';
+        status.classList.remove('hidden');
+        announce(status.textContent);
+      });
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        searchInput.value = transcript;
+        status.textContent = `Heard: "${transcript}". Press Enter or Search button to proceed.`;
+        announce(status.textContent);
+      };
+
+      recognition.onerror = (event) => {
+        status.textContent = `Error: ${event.error}. Try again.`;
+        status.classList.remove('hidden');
+        announce(status.textContent);
+      };
+
+      recognition.onend = () => {
+        status.classList.add('hidden');
+      };
+    }
+
+    // Perform search
+    function performSearch(query) {
+      if (!query.trim()) {
+        status.textContent = 'Please enter or speak a search query.';
+        status.classList.remove('hidden');
+        announce(status.textContent);
+        return;
+      }
+
+      // Mock search results (replace with actual search API if available)
+      const mockResults = [
+        `Result 1 for ${query}`,
+        `Result 2 for ${query}`,
+        `Result 3 for ${query}`
+      ];
+
+      results.innerHTML = '';
+      mockResults.forEach((result, index) => {
+        const div = document.createElement('div');
+        div.classList.add('result-item');
+        div.setAttribute('tabindex', '0');
+        div.textContent = result;
+        results.appendChild(div);
+      });
+
+      // Announce number of results
+      const resultCount = mockResults.length;
+      status.textContent = `Found ${resultCount} results for "${query}".`;
+      status.classList.remove('hidden');
+      announce(status.textContent);
+
+      // Read results aloud
+      mockResults.forEach((result) => {
+        announce(result);
+      });
+    }
+
+    // Text-to-speech function
+    function announce(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      synth.speak(utterance);
+    }
+
+    // Event listeners for search
+    searchButton.addEventListener('click', () => {
+      performSearch(searchInput.value);
+    });
+
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        performSearch(searchInput.value);
+      }
+    });
+
+    // Keyboard navigation for results
+    results.addEventListener('keydown', (e) => {
+      const items = results.querySelectorAll('.result-item');
+      if (!items.length) return;
+
+      let currentIndex = Array.from(items).indexOf(document.activeElement);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        currentIndex = (currentIndex + 1) % items.length;
+        items[currentIndex].focus();
+        announce(items[currentIndex].textContent);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        items[currentIndex].focus();
+        announce(items[currentIndex].textContent);
+      }
+    });
+  </script>
+</body>
+</html>
