@@ -53,7 +53,7 @@
   <h1>Accessible Voice Search</h1>
   <div class="search-container">
     <input type="text" id="searchInput" placeholder="Enter or speak your search" aria-label="Search input">
-    <button id="voiceButton" aria-label="Start voice search">
+    <button id="voiceButton" aria-label="Toggle voice search">
       🎤 Voice Search
     </button>
     <button id="searchButton">Search</button>
@@ -79,29 +79,57 @@
       const recognition = new SpeechRecognition();
       recognition.lang = 'en-US';
       recognition.interimResults = false;
+      recognition.continuous = true; // Keep listening for commands
+
+      let isListening = false;
 
       voiceButton.addEventListener('click', () => {
-        recognition.start();
-        status.textContent = 'Listening... Speak now.';
-        status.classList.remove('hidden');
-        announce(status.textContent);
+        if (isListening) {
+          recognition.stop();
+          isListening = false;
+          voiceButton.textContent = '🎤 Voice Search';
+          status.textContent = 'Voice search stopped.';
+          status.classList.remove('hidden');
+          announce(status.textContent);
+        } else {
+          recognition.start();
+          isListening = true;
+          voiceButton.textContent = '🎤 Stop Listening';
+          status.textContent = 'Listening... Speak now.';
+          status.classList.remove('hidden');
+          announce(status.textContent);
+        }
       });
 
       recognition.onresult = (event) => {
-        const transcript = event.results[0][0].transcript;
-        searchInput.value = transcript;
-        status.textContent = `Heard: "${transcript}". Press Enter or Search button to proceed.`;
-        announce(status.textContent);
+        const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
+        if (transcript === 'stop') {
+          synth.cancel(); // Stop all speech synthesis
+          status.textContent = 'Speech stopped.';
+          status.classList.remove('hidden');
+          announce(status.textContent);
+        } else {
+          searchInput.value = transcript;
+          status.textContent = `Heard: "${transcript}". Press Enter or Search button to proceed.`;
+          status.classList.remove('hidden');
+          announce(status.textContent);
+        }
       };
 
       recognition.onerror = (event) => {
         status.textContent = `Error: ${event.error}. Try again.`;
         status.classList.remove('hidden');
         announce(status.textContent);
+        isListening = false;
+        voiceButton.textContent = '🎤 Voice Search';
       };
 
       recognition.onend = () => {
-        status.classList.add('hidden');
+        if (isListening) {
+          recognition.start(); // Restart to keep listening
+        } else {
+          status.classList.add('hidden');
+        }
       };
     }
 

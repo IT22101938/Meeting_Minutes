@@ -1,0 +1,60 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #111;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover,
+  button:focus {
+    background-color: #0056b3;
+    outline: none;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin: 1.2rem auto;
+    max-width: 600px;
+    line-height: 1.6;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  #output {
+    font-weight: bold;
+    background-color: #e8f0fe;
+  }
+
+  #result {
+    font-style: italic;
+    background-color: #fef3c7;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+

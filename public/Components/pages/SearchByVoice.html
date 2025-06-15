@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Voice Search</title>
+   <link rel="stylesheet" href="../styles/searchByVoice.css">
+</head>
+<body>
+  <h1>🔊 Voice Search (Wikipedia)</h1>
+  <button id="start-btn">🎤 Start Voice Search</button>
+  <p id="output">You said: ...</p>
+  <p id="result">Searching...</p>
+
+  <script>
+    const startBtn = document.getElementById('start-btn');
+    const output = document.getElementById('output');
+    const result = document.getElementById('result');
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+
+    startBtn.onclick = () => {
+      result.textContent = 'Listening...';
+      recognition.start();
+    };
+
+    recognition.onresult = (event) => {
+      const speechToText = event.results[0][0].transcript;
+      output.textContent = 'You said: "' + speechToText + '"';
+      searchWikipedia(speechToText);
+    };
+
+    recognition.onerror = (event) => {
+      output.textContent = 'Error: ' + event.error;
+    };
+
+    function speak(text) {
+      const synth = window.speechSynthesis;
+      const utterThis = new SpeechSynthesisUtterance(text);
+      utterThis.lang = 'en-US';
+      synth.speak(utterThis);
+    }
+
+    async function searchWikipedia(query) {
+      result.textContent = 'Searching Wikipedia for "' + query + '"...';
+
+      try {
+        const response = await fetch(
+          `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(query)}`
+        );
+        const data = await response.json();
+
+        if (data.extract) {
+          result.textContent = data.extract;
+          speak(data.extract);
+        } else {
+          result.textContent = "Sorry, I couldn't find anything.";
+          speak("Sorry, I couldn't find anything.");
+        }
+      } catch (error) {
+        result.textContent = "Error fetching Wikipedia data.";
+        speak("There was an error fetching the information.");
+      }
+    }
+  </script>
+</body>
+</html>
